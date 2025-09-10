@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAO Performance - Contact</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 180px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        .lang-toggle input[type="checkbox"] {
+            display: none;
+        }
+        .lang-toggle label {
+            background: #eee;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .lang-toggle input[type="checkbox"]:checked + label {
+            background: #0078d7;
+            color: white;
+        }
+        .fr, .en {
+            display: none;
+        }
+        html[lang="fr"] .fr,
+        html[lang="en"] .en {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleLang() {
+            const lang = document.documentElement.lang;
+            document.documentElement.lang = lang === "fr" ? "en" : "fr";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-toggle">
+            <label onclick="toggleLang()">FR / EN</label>
+        </div>
+        <div class="logo">
+            <img src="logo-tao.png" alt="Logo TAO Performance">
+        </div>
+
+        <div class="fr">
+            <h1>TAO Performance</h1>
+            <h2>Clôture de l’entreprise – Support Maintenu</h2>
+            <p>TAO Performance a cessé ses activités commerciales. Nous restons disponibles pour assurer le suivi, le SAV et répondre à vos demandes.</p>
+            <form action="https://formsubmit.co/f.jeanmaire@outlook.fr" method="POST">
+                <label for="name">Nom / Prénom</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Contenu du message</label>
+                <textarea id="message" name="message" minlength="50" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+
+        <div class="en">
+            <h1>TAO Performance</h1>
+            <h2>Business Closed – Support Maintained</h2>
+            <p>TAO Performance has ceased its commercial activities. We remain available for product follow-up, support and customer inquiries.</p>
+            <form action="https://formsubmit.co/f.jeanmaire@outlook.fr" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Message content</label>
+                <textarea id="message" name="message" minlength="50" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
